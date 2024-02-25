@@ -1,0 +1,21 @@
+.password-card{
+    display: flex;
+    align-items: center;
+    border: 1px solid #807f7f;
+    border-radius: 6px;
+}
+.icon{
+    margin-right: 10px;
+}
+.icon-color{
+    color: red;
+}
+#password{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+}

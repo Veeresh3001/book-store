@@ -1,0 +1,49 @@
+.header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    height: 10vh;
+    box-shadow: 0px 0px 3px 1px #cecbcb;
+    background-color: #f3f3f3;
+}
+.search-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d4d0d0;
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.search-card:hover{
+    border: #9eafe2 2px solid;
+}
+.search-card input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(25, 23, 34);
+}
+.header-logo{
+    height: 60px;
+}
+.icons-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+}
+.logout-btn{
+    padding: 6px 15px;
+    background-color: #5d80e7;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+}

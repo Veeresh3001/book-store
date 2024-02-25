@@ -1,0 +1,110 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+}
+.login-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #f2f3f5;
+  /* opacity: 0.7; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-card{
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    min-width: 400px;
+    /* max-width: 600px; */
+    box-shadow: 0px 0px 1px 1px #807f7f;
+    border-radius: 10px;
+}
+.login-card div{
+    width: 100%;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+.login-form label{
+    font-size: 16px;
+    font-weight: 700;
+    color: #141313;
+    margin-top: 18px;
+    margin-bottom: 3px;
+}
+.input{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #807f7f;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+}
+#password{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+}
+.login-form button{
+    margin-top: 18px;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+    cursor: pointer;
+    background-color: #113bad;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-link-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.login-link-card p{
+    margin: 0px;
+    margin-right: 5px;
+}
+.err-msg{
+    color: #f10b0b;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 15px;
+}
+.star-msg{
+    color: #f10b0b;
+    font-size: 17px;
+}
+.login-link{
+    /* text-decoration: none; */
+    color: rgb(16, 38, 235);
+    font-weight: 600;
+}
+
+.login-card h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0px;
+}
