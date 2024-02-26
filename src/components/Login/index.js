@@ -92,7 +92,7 @@ class Login extends Component {
                 className="input"
                 type="email"
                 value={this.state.email}
-                placeholder="Enter Your Username"
+                placeholder="Enter Your Email"
                 onChange={this.changeUsername}
               />
               <label htmlFor="password">

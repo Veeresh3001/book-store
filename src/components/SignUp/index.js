@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { AiFillEye } from "react-icons/ai";
 
+import { Link, Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Cookies from "js-cookie";
+
 import "./index.css";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class SignUp extends Component {
   state = {
@@ -63,6 +65,10 @@ class SignUp extends Component {
 
   render() {
     const { errMsg } = this.state;
+    const jwtToken = Cookies.get("jwt_token");
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />;
+    }
     return (
       <div className="login-container">
         <div className="login-card">
