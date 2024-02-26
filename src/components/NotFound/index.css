@@ -1,0 +1,19 @@
+.not-found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.not-found img{
+    width: 400px;
+}
+@media screen and (max-width: 576px) {
+    .not-found img{
+        width: 200px;
+    }
+    .not-found h1{
+        font-size: 20px;
+    }
+    
+}

@@ -166,3 +166,11 @@
 .no-data h1{
     margin: 0px;
 }
+@media screen and (max-width: 576px) {
+    .no-data{
+        height: 70vh;
+    }
+    .no-data img{
+        width: 200px;
+    }
+}

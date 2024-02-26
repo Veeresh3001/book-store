@@ -1,4 +1,4 @@
-import { Link, withRouter, useHistory } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import Cookies from "js-cookie";
 
@@ -9,12 +9,10 @@ import { CgProfile } from "react-icons/cg";
 
 import "./index.css";
 
-const Header = () => {
-  const history = useHistory();
-
+const Header = (props) => {
   const onClickLogout = () => {
     Cookies.remove("jwt_token");
-    // const { history } = props;
+    const { history } = props;
     history.replace("/login");
   };
 
