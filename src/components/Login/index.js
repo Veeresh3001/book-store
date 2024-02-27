@@ -26,8 +26,7 @@ class Login extends Component {
 
   loginSuccuss = (token) => {
     Cookies.set("jwt_token", token, { expires: 30 });
-    const { history } = this.props;
-    history.replace("/");
+    this.setState({ email: "", password: "", errMsg: "" });
   };
 
   changeUsername = (event) => {
@@ -56,13 +55,13 @@ class Login extends Component {
       body: JSON.stringify(userDetails),
     };
     const response = await fetch(
-      "https://mvc-login.onrender.com/login",
+      "https://user-login-1.onrender.com/users/login",
       options
     );
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
 
-    if (data.status === 200) {
+    if (response.ok) {
       this.loginSuccuss(data.jwt_token);
     } else {
       // console.log(data);

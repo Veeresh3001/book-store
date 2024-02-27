@@ -40,18 +40,16 @@ class SignUp extends Component {
       body: JSON.stringify(userDetails),
     };
     const response = await fetch(
-      "https://mvc-login.onrender.com/register",
+      "https://user-login-1.onrender.com/users/register",
       options
     );
     const data = await response.json();
     // console.log(data);
-    if (data.id) {
+    if (response.ok) {
       alert(
         "Registation SuccussFully Completed. Please login with your details !!"
       );
       this.setState({ name: "", email: "", password: "" });
-      const { history } = this.props;
-      history.replace("/login");
     } else {
       this.setState({ errMsg: data.err_msg });
     }
