@@ -103,6 +103,7 @@ class SignUp extends Component {
               <div className="password-card">
                 <input
                   id="password"
+                  className="input password"
                   placeholder="Enter password"
                   type={this.state.showPass ? "text" : "password"}
                   required

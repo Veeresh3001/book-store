@@ -101,6 +101,7 @@ class Login extends Component {
                 <input
                   type={this.state.showPass ? "text" : "password"}
                   required
+                  className="input password"
                   id="password"
                   placeholder="Enter Password"
                   value={this.state.password}
