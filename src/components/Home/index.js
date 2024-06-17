@@ -13,7 +13,7 @@ const Home = (props) => {
   return (
     <div>
       <div>
-        <Header />
+        <Header navActive="Home" />
       </div>
       <div className="home-main-card">
         <div className="heading-card">

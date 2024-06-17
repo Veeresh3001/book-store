@@ -25,7 +25,11 @@ class Login extends Component {
   };
 
   loginSuccuss = (token) => {
-    Cookies.set("jwt_token", token, { expires: 30 });
+    Cookies.set("jwt_token", token, {
+      expires: 365,
+      secure: true,
+      sameSite: "none",
+    });
     this.setState({ email: "", password: "", errMsg: "" });
   };
 
@@ -93,6 +97,7 @@ class Login extends Component {
                 value={this.state.email}
                 placeholder="Enter Your Email"
                 onChange={this.changeUsername}
+                autoComplete="off"
               />
               <label htmlFor="password">
                 PASSWORD<span className="star-msg">*</span>
@@ -106,6 +111,7 @@ class Login extends Component {
                   placeholder="Enter Password"
                   value={this.state.password}
                   onChange={this.changePassword}
+                  autoComplete="off"
                 />
                 <AiFillEye
                   size={30}

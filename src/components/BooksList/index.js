@@ -134,7 +134,7 @@ class Home extends Component {
     }
     return (
       <div className="main">
-        <Header />
+        <Header navActive="Books" />
         <div className="books-main">
           <div className="search-card">
             <FiSearch size={20} />

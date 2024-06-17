@@ -84,6 +84,7 @@ class SignUp extends Component {
                 value={this.state.name}
                 placeholder="Enter name"
                 onChange={this.changeName}
+                autoComplete="off"
               />
               <label htmlFor="email">
                 EMAIL<span className="star-msg">*</span>
@@ -96,6 +97,7 @@ class SignUp extends Component {
                 type="email"
                 value={this.state.email}
                 onChange={this.changeEmail}
+                autoComplete="off"
               />
               <label htmlFor="password">
                 PASSWORD<span className="star-msg">*</span>
@@ -109,6 +111,7 @@ class SignUp extends Component {
                   required
                   value={this.state.password}
                   onChange={this.changePassword}
+                  autoComplete="off"
                 />
                 <AiFillEye
                   size={30}
