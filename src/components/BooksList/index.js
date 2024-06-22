@@ -8,6 +8,7 @@ import { Redirect } from "react-router-dom";
 
 import "./index.css";
 import Cookies from "js-cookie";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const apiStatusConst = {
   initial: "initial",
@@ -51,7 +52,7 @@ class Home extends Component {
     const data = await response.json();
     if (response.ok === true) {
       this.getDataSuccuss(data.books);
-      // console.log(data);
+      console.log(data);
     } else {
       this.getDataFailure();
     }
@@ -93,19 +94,21 @@ class Home extends Component {
           <ul className="books-list">
             {filterData.map((each) => (
               <li className="book-item" key={each.isbn13}>
-                <div className="crop">
-                  <img
-                    className="book-image"
-                    src={each.image}
-                    alt={each.title}
-                  />
-                </div>
-                <div className="book-detail">
-                  <p className="book-title">{each.title}</p>
-                  <p className="book-price">
-                    Price: <span>{each.price}</span>
-                  </p>
-                </div>
+                <Link className="book-link" to={`/books/${each.isbn13}`}>
+                  <div className="crop">
+                    <img
+                      className="book-image"
+                      src={each.image}
+                      alt={each.title}
+                    />
+                  </div>
+                  <div className="book-detail">
+                    <p className="book-title">{each.title}</p>
+                    <p className="book-price">
+                      Price: <span>{each.price}</span>
+                    </p>
+                  </div>
+                </Link>
               </li>
             ))}
           </ul>
@@ -142,6 +145,7 @@ class Home extends Component {
               value={searchBook}
               onChange={this.changeInputValue}
               type="search"
+              name="serach"
               placeholder="Search book here"
             />
           </div>

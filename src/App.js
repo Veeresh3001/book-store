@@ -9,6 +9,7 @@ import NotFound from "./components/NotFound";
 import CheckUser from "./components/CheckUser";
 import Profile from "./components/Profile";
 import Cart from "./components/Cart";
+import BookDetails from "./components/BookDetails";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <CheckUser exact path="/books" component={BooksList} />
         <CheckUser exact path="/profile" component={Profile} />
         <CheckUser exact path="/cart" component={Cart} />
+        <CheckUser exact path="/books/:isbn13" component={BookDetails} />
         <Route component={NotFound} />
       </Switch>
     );
