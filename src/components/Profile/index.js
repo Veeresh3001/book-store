@@ -97,12 +97,13 @@ class Profile extends Component {
               onSubmit={this.onSubmitUserDetails}
             >
               <div>
-                <label htmlFor="imageInp" className="profile-label">
+                <label htmlFor="imageInp" className="profile-img profile-label">
                   Upload Image:
                 </label>
                 <input
                   id="imageInp"
                   type="file"
+                  className="profile-upload"
                   onChange={this.onChangeProfile}
                 />
               </div>
