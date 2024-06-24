@@ -1,4 +1,4 @@
-.main{
+.books{
     height: 100vh;
     width: 100%;
 }
@@ -34,14 +34,20 @@
     margin-top: 10px;
     border-radius: 5px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 365px) and (max-width: 768px){
     .search-card{
-        width: 90%;
+        width: 60%;
+        padding: 6px;
+    }
+}
+@media screen and (max-width: 364px) {
+    .search-card{
+        width: 80%;
         padding: 5px;
     }
 }
 .search-card:hover{
-    border: #9eafe2 2px solid;
+    border-bottom: #9eafe2 2px solid;
 }
 .search-card input{
     background-color: transparent;
@@ -53,6 +59,16 @@
     font-weight: 500;
     color: rgb(25, 23, 34);
 }
+@media screen and (max-width: 364px) {
+    .search-card input{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .search-card input{
+        font-size: 16px;
+    }
+}
 .books-list{
     padding: 0px;
     list-style-type: none;
@@ -62,11 +78,17 @@
     overflow-y: auto;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 15px;
     margin: 0px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 364px) {
     .books-list{
-        justify-content: space-around;
+        margin-top: 5px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .books-list{
+        margin-top: 10px;
     }
 }
 
@@ -79,6 +101,7 @@
     border-radius: 10px;
     padding: 6px;
 }
+
 .book-link{
     color: #3d3b3b;
     text-decoration: none;
@@ -86,9 +109,9 @@
 .book-item:hover{
     box-shadow: 0px 2px 3px 1px #858484;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 364px) {
     .book-item{
-        margin: 8px;
+        margin: 5px;
         box-shadow: 0px 2px 3px 1px #858484;
         width: 100px;
     }
@@ -97,16 +120,26 @@
     }
 }
 
+
 .book-image{
     display: inline-block;
     object-fit: cover;
     width: 100%;
     height: 200px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 364px) {
     .book-image{
-        /* object-position: center 100%; */
         height: 100px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .book-item{
+        margin: 6px;
+        box-shadow: 0px 2px 3px 1px #858484;
+        width: 150px;
+    }
+    .book-image{
+        height: 150px;
     }
 }
 .book-image:hover{
@@ -119,43 +152,33 @@
     padding: 10px;
     text-align: center;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 364px) {
     .book-detail{
         padding: 6px;
     }
 }
-.book-detail p{
-    margin: 0px;
-}
+
 .book-title{
-    font-size: 14px;
+    margin: 0px;
+    font-size: 16px;
     font-weight: 700;
     height: 40px;
     overflow-y: hidden;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 364px) {
     .book-title{
         font-size: 10px;
         font-weight: 600;
         height: 25px;
         overflow-y: hidden;
-        /* height: ; */
     }
 }
-.book-price{
-    font-size: 20px;
-    font-weight: 700;
-    color: #e94b4b;
-}
-@media screen and (max-width: 576px) {
-    .book-price{
-        font-size: 10px;
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .book-title{
+        font-size: 12px;
+        height: 30px;
     }
 }
-.book-price span{
-    color: rgb(59, 10, 255);
-}
-
 
 .no-data{
     display: flex;
@@ -170,11 +193,30 @@
 .no-data h1{
     margin: 0px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 364px) {
     .no-data{
         height: 70vh;
     }
     .no-data img{
         width: 200px;
+    }
+    .no-data h1{
+        font-size: 20px;
+    }
+    .no-data p{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .no-data img{
+        width: 300px;
+    }
+    .no-data h1{
+        font-size: 25px;
+    }
+    .no-data p{
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
     }
 }

@@ -104,9 +104,6 @@ class Home extends Component {
                   </div>
                   <div className="book-detail">
                     <p className="book-title">{each.title}</p>
-                    <p className="book-price">
-                      Price: <span>{each.price}</span>
-                    </p>
                   </div>
                 </Link>
               </li>
@@ -136,7 +133,7 @@ class Home extends Component {
       return <Redirect to="/login" />;
     }
     return (
-      <div className="main">
+      <div className="books">
         <Header navActive="Books" />
         <div className="books-main">
           <div className="search-card">

@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { MdMenu, MdClose } from "react-icons/md";
 
 import Cookies from "js-cookie";
 
 import logo from "../../images/comrade.png";
 
-// import { BsCartCheckFill } from "react-icons/bs";
-// import { CgProfile } from "react-icons/cg";
+import { FaHome, FaBook, FaCartPlus, FaUser } from "react-icons/fa";
+import { LuLogOut } from "react-icons/lu";
 
 import "./index.css";
 
 const Header = (props) => {
   const [showPop, setShowPop] = useState(false);
+  const [showMobileNav, setMobileNav] = useState(false);
 
   const onClickLogout = () => {
     Cookies.remove("jwt_token");
@@ -56,7 +58,49 @@ const Header = (props) => {
         <button className="logout-btn" type="button" onClick={onClickLogoutBtn}>
           Logout
         </button>
+        {showMobileNav ? (
+          <MdClose
+            className="mobile-menu-icon"
+            onClick={() => setMobileNav((prev) => !prev)}
+            size={30}
+          />
+        ) : (
+          <MdMenu
+            className="mobile-menu-icon"
+            onClick={() => setMobileNav((prev) => !prev)}
+            size={30}
+          />
+        )}
       </div>
+      {showMobileNav && (
+        <div className="mobile-navbar">
+          <ul className="mobile-nav-card">
+            <Link to="/" className="nav-link">
+              <li className={`nav ${navActive === "Home" ? "active" : ""}`}>
+                <FaHome size={20} />
+              </li>
+            </Link>
+            <Link to="/books" className="nav-link">
+              <li className={`nav ${navActive === "Books" ? "active" : ""}`}>
+                <FaBook size={20} />
+              </li>
+            </Link>
+            <Link to="/cart" className="nav-link">
+              <li className={`nav ${navActive === "Cart" ? "active" : ""}`}>
+                <FaCartPlus size={20} />
+              </li>
+            </Link>
+            <Link to="/profile" className="nav-link">
+              <li className={`nav ${navActive === "Profile" ? "active" : ""}`}>
+                <FaUser size={20} />
+              </li>
+            </Link>
+            <li onClick={onClickLogoutBtn}>
+              <LuLogOut size={20} />
+            </li>
+          </ul>
+        </div>
+      )}
       {showPop && (
         <div className="popup-container">
           <div className="popup">

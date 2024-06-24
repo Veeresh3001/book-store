@@ -11,10 +11,8 @@ const Home = (props) => {
     history.replace("/books");
   };
   return (
-    <div>
-      <div>
-        <Header navActive="Home" />
-      </div>
+    <div className="home">
+      <Header navActive="Home" />
       <div className="home-main-card">
         <div className="heading-card">
           <h1>Welcome To Our Book Store</h1>

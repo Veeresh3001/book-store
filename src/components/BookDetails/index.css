@@ -1,3 +1,7 @@
+.main{
+    height: 100vh;
+    width: 100%;
+}
 .book-details-card{
     display: flex;
     width: 100%;
@@ -5,18 +9,42 @@
     justify-content: flex-start;
     align-items: center;
 }
+@media screen and (max-width: 768px) {
+    .book-details-card{
+        padding: 5px 10px;
+        flex-direction: column;
+    }
+}
+
 .book-details-card img{
-    width: 400px;
+    width: 500px;
     height: 500px;
-    /* box-shadow: 0px 1px 10px #2b2a2a; */
 }
 .book-details{
     padding: 20px;
+    width: 100%;
 }
+@media screen and (max-width: 768px) {
+    .book-details-card img{
+        order: 0;
+        width: 300px;
+        height: 300px;
+    }
+    .book-details{
+        order: 1;
+    }
+}
+
 .book-main{
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+@media screen and (max-width: 364px) {
+    .book-main{
+        padding: 10px;
+        width: 100%;
+    }
 }
 .book-main div{
     display: flex;
@@ -41,10 +69,40 @@
     font-size: 40px;
     color: #f72e2e;
     align-self: flex-end;
-    padding: 6px;
+    /* padding: 6px; */
     border-radius: 6px;
     width: max-content;
     text-shadow: #2b2a2a;
+}
+@media screen and (max-width: 364px) {
+    .book-main a{
+        font-size: 15px;
+    }
+    .book-main h2{
+        font-size: 18px;
+    }
+    .book-main p{
+        font-size: 14px;
+    }
+    .book-main h1{
+        /* padding: 5px; */
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .book-main a{
+        font-size: 18px;
+    }
+    .book-main h2{
+        font-size: 20px;
+    }
+    .book-main p{
+        font-size: 16px;
+    }
+    .book-main h1{
+        /* padding: 5px; */
+        font-size: 22px;
+    }
 }
 .book-main span{
     color: #3b2ef7;
@@ -52,20 +110,22 @@
 .book-data{
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 10px;
+    width: 100%;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 .book-data div{
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    width: 100%;
+    gap: 10px;
 }
 .book-data h1{
     color: #0e0b38;
     font-size: 20px;
     text-decoration: underline #3b2ef7;
+    width: 300px;
 }
 .book-data p{
     font-size: 18px;
@@ -73,7 +133,36 @@
     align-items: center;
     font-weight: 500;
     color: #2b2a2a;
-    /* color: #52b410; */
     width: 300px;
     margin-top: 5px;
+}
+@media screen and (max-width: 364px) {
+    .book-data p{
+        font-size: 14px;
+        width: 100%;
+    }
+    .book-data h1{
+        font-size: 15px;
+    }
+    .book-data div{
+        gap: 10px;
+    }
+    .book-data{
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px){
+    .book-data p{
+        font-size: 16px;
+        width: 100%;
+    }
+    .book-data h1{
+        font-size: 18px;
+    }
+    .book-data div{
+        gap: 12px;
+    }
+    .book-data{
+        margin-top: 20px;
+    }
 }

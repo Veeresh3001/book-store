@@ -5,8 +5,21 @@
 .profile-head{
     color: #202020;
     margin: 20px;
+    font-size: 30px;
     font-weight: 700;
     text-decoration: underline;
+}
+@media screen and (max-width: 364px) {
+    .profile-head{
+        margin: 10px;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 365px) and (max-width: 768px) {
+    .profile-head{
+        margin: 15px;
+        font-size: 20px;
+    }
 }
 .profile-details{
     display: flex;
@@ -17,9 +30,18 @@
     max-height: 100vh;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+    .profile-details{
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-details{
+        width: 100%;
+    }
+}
+
 .user-details div{
     display: flex;
     flex-direction: column;
@@ -35,7 +57,18 @@
     width: 200px;
     border-radius: 50%;
 }
-
+@media screen and (max-width: 768px) {
+    .user-details{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .user-details img{
+        height: 100px;
+        width: 100px;
+    }
+}
 .update-details{
     display: flex;
     flex-direction: column;
@@ -55,6 +88,15 @@
     outline: none;
     border-radius: 6px;
 }
+@media screen and (max-width: 768px){
+    .update-details{
+        gap: 10px;
+        margin-left: 0px;
+    }
+    .update-details button{
+        padding: 6px 12px;
+    }
+}
 .vr-line{
     border-left: 2px solid #202020;
     max-height: 100vh;
@@ -73,4 +115,18 @@
     outline: none;
     border-radius: 5px;
     border: #202020 1px solid;
+}
+@media screen and (max-width: 768px){
+    .vr-line{
+        display: none;
+    }
+    .profile-label{
+        font-size: 15px;
+    }
+    .profile-input{
+        height: 30px;
+        width: 100%;
+        font-style: 12px;
+        padding-left: 7px;
+    }
 }
