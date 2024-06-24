@@ -75,7 +75,7 @@ class Profile extends Component {
           <h1 className="profile-head">User Details</h1>
           <div className="profile-details">
             <div className="user-details">
-              <img src={userImg} alt="user-profile" />
+              <img className="profile-img" src={userImg} alt="user-profile" />
               <div>
                 <p>
                   <span>Full Name: </span>
